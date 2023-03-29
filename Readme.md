@@ -7,7 +7,7 @@
 
     Construct a clean and concise ER diagram for the NHL database using the Chen notation as in your textbook. List your assumptions and clearly indicate the cardinality mappings as well as any role indicators in your ER diagram.
     
-    Editable ER diagram, use [draw.io](https://app.diagrams.net/) to edit [file](https://github.com/thewecas/pws-sql/blob/master/Q1.National%20Hockey%20Team%20ER%20Diagram.drawio)
+    Editable ER diagram, use [draw.io](https://app.diagrams.net/) to edit [file](https://github.com/thewecas/pws-sql/blob/master/Q1.drawio)
   
     **ER diagram**
   
