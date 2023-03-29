@@ -12,3 +12,13 @@
     **ER diagram**
   
     ![Q1 ER diagram](Q1.svg)
+    
+---
+2. Construct an E-R diagram for a car-insurance company whose customers own one or more cars each. Each car has associated with it zero to any number of recorded accidents
+
+    Editable ER diagram, use [draw.io](https://app.diagrams.net/) to edit [file](https://github.com/thewecas/pws-sql/blob/master/Q2.drawio)
+        
+    **ER diagram**
+    
+    ![Q1 ER diagram](Q2.svg)
+        
