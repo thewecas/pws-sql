@@ -80,7 +80,8 @@ insert into emp values(1005,"John",5000,"2005-Jan-1",NULL,30,1006);
     select * 
     from dept 
     where deptno in (
-        select deptno from emp 
+        select deptno 
+        from emp 
         group by deptno 
         having count()(deptno)>1
     );
