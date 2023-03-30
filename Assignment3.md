@@ -173,15 +173,23 @@ insert into order_details(order_id,product_id,quantity) values(10,1,1);
 
 3. Fetch the Customer Name, who has not placed any order
     ```
-    select customer_name from customer 
-    where customer_id not in (select customer_id from orders);
+    select customer_name 
+    from customer 
+    where customer_id not in (
+        select customer_id 
+        from orders
+    );
     ```
 
 
 4. Fetch the Product Details without any order(purchase)
     ```
-    select * from product 
-    where product_id not in (select product_id from order_details);
+    select * 
+    from product 
+    where product_id not in (
+        select product_id 
+        from order_details
+    );
     ```
 
 
@@ -198,25 +206,33 @@ insert into order_details(order_id,product_id,quantity) values(10,1,1);
 
 6. Fetch the Customer details, who has placed the first and last order
     ```
-    select * from customer 
+    select * 
+    from customer 
     where customer_id in (
-        select customer_id from orders where order_date in 
+        select customer_id 
+        from orders 
+        where order_date in 
         (
-            select max(order_date) from orders
+            select max(order_date) 
+            from orders
             union
-            select min(order_date) from orders 
-            )
-        );
+            select min(order_date) 
+            from orders 
+        )
+    );
     ```
 
 7. Fetch the customer details , who has placed more number of orders
     ```
-    select * from customer 
+    select * 
+    from customer 
     where customer_id = 
-        (select customer_id from orders 
+        (select customer_id 
+        from orders 
         group by customer_id 
         order by count(customer_id) desc 
-        limit 1);
+        limit 1
+    );
     ```
 
 
@@ -241,9 +257,12 @@ insert into order_details(order_id,product_id,quantity) values(10,1,1);
 
 10. Fetch the maximum priced Ordered Product
     ```
-    select * from product 
-    where product_id in (select distinct product_id from order_details) 
+    select * 
+    from product 
+    where product_id in (
+        select distinct product_id 
+        from order_details
+    ) 
     order by product_price desc 
     limit 1;
     ```
-
